@@ -1,7 +1,6 @@
 # Software Design Description
 ## EcoPoint — Sistem Informasi Daur Ulang Sampah Berbasis Poin
-
-> **Version:** 1.2A  
+ 
 > **Prepared by:** Tim Pengembang EcoPoint  
 > **Organization:** Tim Pengembang EcoPoint — Bandung, Jawa Barat, Indonesia  
 > **Date:** Juni 2026  

@@ -8,15 +8,6 @@
 
 ---
 
-## Revision History
-
-| Name | Date | Reason For Changes | Version |
-|---|---|---|---|
-| Tim Pengembang EcoPoint | 10 April 2026 | Initial draft — SDD v0.1 | 0.1 |
-| Tim Pengembang EcoPoint | Juni 2026 | Revisi dan penyesuaian alur sistem dengan ide awal — SDD v1.1 | 1.1 |
-
----
-
 ## Table of Contents
 
 - [1. Introduction](#1-introduction)

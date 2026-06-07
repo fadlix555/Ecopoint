@@ -5,7 +5,6 @@
 > **Prepared by:** Tim Pengembang EcoPoint  
 > **Organization:** Tim Pengembang EcoPoint — Bandung, Jawa Barat, Indonesia  
 > **Date:** Juni 2026  
-> **Catatan Revisi:** Struktur dokumen dipertahankan mengikuti SDD lama. Penambahan pada revisi ini hanya menyisipkan UML dan desain UI ke bagian yang relevan tanpa mengubah susunan bab utama.
 
 ---
 
@@ -45,15 +44,6 @@
 
 ### 1.1 Document Purpose
 Dokumen *Software Design Description* (SDD) ini menjabarkan arsitektur dan rancangan teknis sistem **EcoPoint** — Sistem Informasi Daur Ulang Sampah Berbasis Poin. Dokumen ini disusun sebagai acuan implementasi bagi tim pengembang dan sebagai referensi pemeliharaan bagi operator sistem.
-
-Pada revisi ini, struktur SDD lama **tetap dipertahankan**, tetapi dilengkapi dengan artefak visual berikut:
-- **Use Case Diagram**
-- **Class Diagram**
-- **Sequence Diagram**
-- **Activity Diagram**
-- **UI Screen Designs / Wireframe**
-
-> **Catatan Revisi v1.2A:** Revisi ini tetap mengikuti model **timbangan manual**. Admin Gudang menginput hasil timbangan secara manual ke sistem, lalu Super Admin menambahkan poin berdasarkan data tersebut. Tidak ada integrasi perangkat IoT.
 
 ### 1.2 Subject Scope
 Sistem yang dirancang adalah **EcoPoint v1.2A**, platform web responsif untuk manajemen bank sampah digital. Tujuan utamanya adalah mendigitalisasi seluruh alur kerja bank sampah, mulai dari registrasi pengguna, pengajuan setoran, penimbangan manual oleh Admin Gudang, input kilogram aktual, penambahan poin oleh Super Admin, pencairan poin, hingga pengelolaan inventori dan penjualan ke mitra.
@@ -361,9 +351,3 @@ Node utama:
 - Bulan 2: Implementasi inti
 - Bulan 3: Implementasi lanjutan
 - Bulan 4: Testing dan deployment
-
----
-
-**Catatan Akhir**
-- Dokumen ini digunakan sebagai **pengganti file SDD lama** dengan **struktur yang tetap sama**.
-- Tambahan UML dan desain UI sudah disisipkan ke bagian yang relevan tanpa membuat struktur bab baru di luar pola SDD sebelumnya.

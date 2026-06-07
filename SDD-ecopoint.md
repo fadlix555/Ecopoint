@@ -10,34 +10,34 @@
 ---
 
 ## Table of Contents
-- <a href="1-introduction" type="user" notify="false">@1. Introduction</a>
- - <a href="11-document-purpose" type="user" notify="false">@1.1 Document Purpose</a>
- - <a href="12-subject-scope" type="user" notify="false">@1.2 Subject Scope</a>
- - <a href="13-definitions-acronyms-and-abbreviations" type="user" notify="false">@1.3 Definitions, Acronyms, and Abbreviations</a>
- - <a href="14-references" type="user" notify="false">@1.4 References</a>
- - <a href="15-document-overview" type="user" notify="false">@1.5 Document Overview</a>
-- <a href="2-design-overview" type="user" notify="false">@2. Design Overview</a>
- - <a href="21-stakeholder-concerns" type="user" notify="false">@2.1 Stakeholder Concerns</a>
- - <a href="22-selected-viewpoints" type="user" notify="false">@2.2 Selected Viewpoints</a>
-- <a href="3-design-views" type="user" notify="false">@3. Design Views</a>
- - <a href="31-context-view" type="user" notify="false">@3.1 Context View</a>
- - <a href="32-composition-view" type="user" notify="false">@3.2 Composition View</a>
- - <a href="33-logical-view" type="user" notify="false">@3.3 Logical View</a>
- - <a href="34-information-view" type="user" notify="false">@3.4 Information View</a>
- - <a href="35-interface-view" type="user" notify="false">@3.5 Interface View</a>
- - <a href="36-interaction-view" type="user" notify="false">@3.6 Interaction View</a>
- - <a href="37-algorithm-view" type="user" notify="false">@3.7 Algorithm View</a>
- - <a href="38-state-dynamics-view" type="user" notify="false">@3.8 State Dynamics View</a>
- - <a href="39-deployment-view" type="user" notify="false">@3.9 Deployment View</a>
-- <a href="4-decisions" type="user" notify="false">@4. Decisions</a>
- - <a href="dec-001-arsitektur-web-monolitik-berbasis-php" type="user" notify="false">@DEC-001: Arsitektur Web Monolitik Berbasis PHP</a>
- - <a href="dec-002-basis-data-relasional-mysqlmariadb" type="user" notify="false">@DEC-002: Basis Data Relasional MySQL/MariaDB</a>
- - <a href="dec-003-penimbangan-manual-oleh-admin-gudang" type="user" notify="false">@DEC-003: Penimbangan Manual oleh Admin Gudang</a>
-- <a href="5-appendixes" type="user" notify="false">@5. Appendixes</a>
- - <a href="appendix-a-ringkasan-kelayakan-telos" type="user" notify="false">@Appendix A: Ringkasan Kelayakan TELOS</a>
- - <a href="appendix-b-tim-pengembang-ecopoint" type="user" notify="false">@Appendix B: Tim Pengembang EcoPoint</a>
- - <a href="appendix-c-spesifikasi-teknis-minimum" type="user" notify="false">@Appendix C: Spesifikasi Teknis Minimum</a>
- - <a href="appendix-d-timeline-pengembangan" type="user" notify="false">@Appendix D: Timeline Pengembangan</a>
+
+- [1. Introduction](#1-introduction)
+  - [1.1 Document Purpose](#11-document-purpose)
+  - [1.2 Subject Scope](#12-subject-scope)
+  - [1.3 Definitions, Acronyms, and Abbreviations](#13-definitions-acronyms-and-abbreviations)
+  - [1.4 References](#14-references)
+  - [1.5 Document Overview](#15-document-overview)
+- [2. Design Overview](#2-design-overview)
+  - [2.1 Stakeholder Concerns](#21-stakeholder-concerns)
+  - [2.2 Selected Viewpoints](#22-selected-viewpoints)
+- [3. Design Views](#3-design-views)
+  - [3.1 Context View](#31-context-view)
+  - [3.2 Composition View](#32-composition-view)
+  - [3.3 Logical View](#33-logical-view)
+  - [3.4 Information View](#34-information-view)
+  - [3.5 Interface View](#35-interface-view)
+  - [3.6 Interaction View](#36-interaction-view)
+  - [3.7 Algorithm View](#37-algorithm-view)
+  - [3.8 State Dynamics View](#38-state-dynamics-view)
+  - [3.9 Deployment View](#39-deployment-view)
+- [4. Decisions](#4-decisions)
+  - [DEC-001: Arsitektur Web Monolitik Berbasis PHP](#dec-001-arsitektur-web-monolitik-berbasis-php)
+  - [DEC-002: Basis Data Relasional MySQL/MariaDB](#dec-002-basis-data-relasional-mysqlmariadb)
+  - [DEC-003: Integrasi IoT via HTTP REST](#dec-003-integrasi-iot-via-http-rest)
+- [5. Appendixes](#5-appendixes)
+  - [Appendix A: Ringkasan Kelayakan TELOS](#appendix-a-ringkasan-kelayakan-telos)
+  - [Appendix B: Tim Pengembang EcoPoint](#appendix-b-tim-pengembang-ecopoint)
+  - [Appendix C: Spesifikasi Teknis Minimum](#appendix-c-spesifikasi-teknis-minimum)
 
 ---
 

@@ -45,7 +45,7 @@
 Dokumen *Software Design Description* (SDD) ini menjabarkan arsitektur dan rancangan teknis sistem **EcoPoint** — Sistem Informasi Daur Ulang Sampah Berbasis Poin. Dokumen ini disusun sebagai acuan implementasi bagi tim pengembang dan sebagai referensi pemeliharaan bagi operator sistem.
 
 ### 1.2 Subject Scope
-Sistem yang dirancang adalah **EcoPoint v1.2A**, platform web responsif untuk manajemen bank sampah digital. Tujuan utamanya adalah mendigitalisasi seluruh alur kerja bank sampah, mulai dari registrasi pengguna, pengajuan setoran, penimbangan manual oleh Admin Gudang, input kilogram aktual, penambahan poin oleh Super Admin, pencairan poin, hingga pengelolaan inventori dan penjualan ke mitra.
+Sistem yang dirancang adalah **EcoPoint**, platform web responsif untuk manajemen bank sampah digital. Tujuan utamanya adalah mendigitalisasi seluruh alur kerja bank sampah, mulai dari registrasi pengguna, pengajuan setoran, penimbangan manual oleh Admin Gudang, input kilogram aktual, penambahan poin oleh Super Admin, pencairan poin, hingga pengelolaan inventori dan penjualan ke mitra.
 
 **Alur inti sistem EcoPoint:**
 1. Pengguna mendaftar dan memiliki akun.

@@ -220,23 +220,23 @@ EcoPoint menggunakan arsitektur tiga lapisan (*three-tier*) dalam satu codebase 
 ```
 ┌──────────────────────────────────────────────────────────────┐
 │                   PRESENTATION LAYER                         │
-│  ┌────────────┐ ┌──────────────┐ ┌────────────┐ ┌─────────┐ │
-│  │ Auth Pages │ │ User Dash    │ │ Admin Panel│ │ SA Panel│ │
-│  │ (login,    │ │ (saldo, form │ │ (timbang,  │ │ (poin,  │ │
-│  │  register) │ │  setoran)    │ │  inventori)│ │  redeem)│ │
-│  └────────────┘ └──────────────┘ └────────────┘ └─────────┘ │
+│  ┌────────────┐ ┌──────────────┐ ┌────────────┐ ┌─────────┐  │
+│  │ Auth Pages │ │ User Dash    │ │ Admin Panel│ │ SA Panel│  │
+│  │ (login,    │ │ (saldo, form │ │ (timbang,  │ │ (poin,  │  │
+│  │  register) │ │  setoran)    │ │  inventori)│ │  redeem)│  │
+│  └────────────┘ └──────────────┘ └────────────┘ └─────────┘  │
 └─────────────────────────────┬────────────────────────────────┘
                               │ HTTP Request / Response
 ┌─────────────────────────────▼────────────────────────────────┐
 │                   BUSINESS LOGIC LAYER                       │
-│  ┌────────────┐ ┌──────────┐ ┌──────────┐ ┌──────────────┐  │
-│  │ Auth &     │ │ Deposit  │ │ Poin &   │ │  Redeem &    │  │
-│  │ RBAC       │ │ Module   │ │ Kalkulasi│ │  Payout      │  │
-│  └────────────┘ └──────────┘ └──────────┘ └──────────────┘  │
-│  ┌────────────┐ ┌──────────┐ ┌──────────┐ ┌──────────────┐  │
-│  │ Inventori  │ │ Penjualan│ │ Harga    │ │  Notifikasi  │  │
-│  │ Module     │ │ Mitra    │ │ Config   │ │  Module      │  │
-│  └────────────┘ └──────────┘ └──────────┘ └──────────────┘  │
+│  ┌────────────┐ ┌──────────┐ ┌──────────┐ ┌──────────────┐   │
+│  │ Auth &     │ │ Deposit  │ │ Poin &   │ │  Redeem &    │   │
+│  │ RBAC       │ │ Module   │ │ Kalkulasi│ │  Payout      │   │
+│  └────────────┘ └──────────┘ └──────────┘ └──────────────┘   │
+│  ┌────────────┐ ┌──────────┐ ┌──────────┐ ┌──────────────┐   │
+│  │ Inventori  │ │ Penjualan│ │ Harga    │ │  Notifikasi  │   │
+│  │ Module     │ │ Mitra    │ │ Config   │ │  Module      │   │
+│  └────────────┘ └──────────┘ └──────────┘ └──────────────┘   │
 └─────────────────────────────┬────────────────────────────────┘
                               │ SQL Query (PDO)
 ┌─────────────────────────────▼────────────────────────────────┐
@@ -314,7 +314,7 @@ Berikut entitas domain utama beserta atribut, metode, dan relasi antar entitas:
         │ creates              processes
         ▼ N                    N ▼
 ┌───────────────────────┐   ┌───────────────────────┐
-│       Deposit         │   │      Redemption        │
+│       Deposit         │   │      Redemption       │
 ├───────────────────────┤   ├───────────────────────┤
 │ + id: int (PK)        │   │ + id: int (PK)        │
 │ + user_id: int (FK)   │   │ + user_id: int (FK)   │
@@ -335,23 +335,23 @@ Berikut entitas domain utama beserta atribut, metode, dan relasi antar entitas:
 └───────┬───────────────┘ generates 0..1     │
         │ references 1                       ▼
         ▼ N                    ┌─────────────────────────┐
-┌────────────────────┐         │    PointTransaction      │
+┌────────────────────┐         │    PointTransaction     │
 │   PriceSetting     │         ├─────────────────────────┤
-├────────────────────┤         │ + id: int (PK)           │
-│ + id: int (PK)     │         │ + user_id: int (FK)      │
-│ + jenis_sampah     │         │ + deposit_id: int (FK)   │
-│ + harga_per_kg     │         │ + tipe: enum             │
-│ + persen_insentif  │         │ + jumlah_poin: int       │
-│ + updated_by: int  │         │ + ditambahkan_oleh: int  │
-│ + updated_at       │         │ + keterangan: string     │
-├────────────────────┤         │ + created_at: datetime   │
+├────────────────────┤         │ + id: int (PK)          │
+│ + id: int (PK)     │         │ + user_id: int (FK)     │
+│ + jenis_sampah     │         │ + deposit_id: int (FK)  │
+│ + harga_per_kg     │         │ + tipe: enum            │
+│ + persen_insentif  │         │ + jumlah_poin: int      │
+│ + updated_by: int  │         │ + ditambahkan_oleh: int │
+│ + updated_at       │         │ + keterangan: string    │
+├────────────────────┤         │ + created_at: datetime  │
 │ + update()         │         ├─────────────────────────┤
 │ + getHargaAktif()  │         │ + catat()               │
 └────────────────────┘         │ + riwayatByUser()       │
                                └─────────────────────────┘
 
 ┌─────────────────────────┐     ┌─────────────────────────┐
-│     InventoryItem       │     │      PartnerSale         │
+│     InventoryItem       │     │      PartnerSale        │
 ├─────────────────────────┤     ├─────────────────────────┤
 │ + id: int (PK)          │ 1 N │ + id: int (PK)          │
 │ + jenis_sampah: string  ├────►│ + jenis_sampah: string  │
@@ -542,9 +542,9 @@ Seluruh endpoint menggunakan prefix `/api/v1/` dan mengembalikan JSON. Autentika
 **1 — Dashboard User**
 ```
 ┌─────────────────────────────────────────────────────────┐
-│  EcoPoint        [Halo, Budi] [🔔 Notifikasi] [Keluar]  │
+│  EcoPoint        [Halo, Budi] [🔔 Notifikasi] [Keluar] │
 ├─────────────────┬─────────────────┬─────────────────────┤
-│  💰 Saldo Poin  │  📦 Setoran     │  🔄 Redeem Terakhir │
+│ 💰 Saldo Poin   │  📦 Setoran    │ 🔄 Redeem Terakhir │
 │   12.500 poin   │  Aktif: 2       │  Status: Menunggu   │
 ├─────────────────┴─────────────────┴─────────────────────┤
 │  [+ Buat Setoran Baru]                                  │
@@ -567,10 +567,10 @@ Seluruh endpoint menggunakan prefix `/api/v1/` dan mengembalikan JSON. Autentika
 │  Jenis Sampah:   [Pilih jenis ▼]                        │
 │                  Plastik / Kertas / Logam / Kaca / Lain │
 │  Estimasi Berat: [______] kg                            │
-│  Catatan:        [________________________________]      │
-│                  [________________________________]      │
+│  Catatan:        [________________________________]     │
+│                  [________________________________]     │
 │                                                         │
-│  ℹ️  Bawa sampah ke gudang setelah mengirim formulir ini │
+│ ℹ️  Bawa sampah ke gudang setelah mengirim formulir ini │
 │                                                         │
 │  [Simpan Draft]                [Kirim Setoran →]        │
 └─────────────────────────────────────────────────────────┘
@@ -584,7 +584,7 @@ Seluruh endpoint menggunakan prefix `/api/v1/` dan mengembalikan JSON. Autentika
 │  ANTRIAN SETORAN       │  DETAIL SETORAN #041           │
 │  ┌───────────────────┐ │  User  : Budi Santoso          │
 │  │ #041 - Kertas     │ │  Jenis : Kertas                │
-│  │ Budi S. - 2 kg    │◄│  Est.  : 2.0 kg               │
+│  │ Budi S. - 2 kg    │◄│  Est.  : 2.0 kg                │
 │  │ [Pilih]           │ │  Status: Menunggu Verifikasi   │
 │  ├───────────────────┤ │                                │
 │  │ #040 - Plastik    │ │  Berat Aktual: [______] kg     │

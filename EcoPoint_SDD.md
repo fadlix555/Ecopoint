@@ -61,7 +61,7 @@ SDD ini disusun merujuk pada dokumen *Software Requirements Specification* (SRS)
 
 ### 1.2 Subject Scope
 
-Sistem yang dirancang adalah **EcoPoint v1.0**, platform web responsif untuk manajemen bank sampah digital berbasis poin insentif. Tujuan utama sistem adalah mendigitalisasi seluruh alur kerja bank sampah: dari registrasi pengguna dan pengajuan setoran, penimbangan manual oleh Admin Gudang, pemberian poin oleh Super Admin, hingga pencairan poin dan penjualan inventori ke mitra.
+Sistem yang dirancang adalah **EcoPoint**, platform web responsif untuk manajemen bank sampah digital berbasis poin insentif. Tujuan utama sistem adalah mendigitalisasi seluruh alur kerja bank sampah: dari registrasi pengguna dan pengajuan setoran, penimbangan manual oleh Admin Gudang, pemberian poin oleh Super Admin, hingga pencairan poin dan penjualan inventori ke mitra.
 
 **Kapabilitas utama yang dicakup SDD ini:**
 - Manajemen akun dan autentikasi berbasis peran (User, Admin Gudang, Super Admin).

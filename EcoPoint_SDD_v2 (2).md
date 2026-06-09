@@ -125,9 +125,9 @@ Dokumen ini dibagi menjadi lima bagian utama:
 * **Viewpoint:** Logical
 * **Representation:** UML Class Diagram. Entitas utama: `User`, `Deposit`, `PointTransaction`, `Redemption`, `InventoryItem`, `PartnerSale`, `PriceSetting`. Relasi kardinalitas utama: `User 1 → N Deposit`, `User 1 → N Redemption`, `User 1 → N PointTransaction`, `Deposit 1 → 0..1 PointTransaction`, `InventoryItem 1 → N PartnerSale`.
 
-![Gambar 3.3 – Class Diagram Domain EcoPoint](diagrams/class_diagram.svg)
+![Gambar 3.2 – Class Diagram Domain EcoPoint](diagrams/class_diagram_ecopoint.png)
 
-*Gambar 3.3 – Class Diagram Domain EcoPoint*
+*Gambar 3.2 – Class Diagram Domain EcoPoint*
 
 **Ringkasan Relasi:**
 
@@ -259,7 +259,7 @@ Halaman profil pengguna dengan header hijau yang menampilkan foto, nama, email, 
 * **Viewpoint:** Interaction
 * **Representation:** UML Sequence Diagram. **Alur Setoran:** User POST formulir → Deposit tersimpan (`menunggu_verifikasi`) → Admin Gudang input berat aktual → status `menunggu_poin` → Super Admin tinjau dan konfirmasi → Sistem eksekusi transaksi atomik ACID (update saldo, catat PointTransaction, update status deposit, update inventori). **Alur Redeem:** User POST redeem [guard: saldo cukup] → Super Admin approve → Payment Gateway dipanggil → jika sukses, debit poin atomik; jika gagal, status `gagal_transfer` tanpa debit poin.
 
-![Gambar 3.6 – Sequence Diagram Alur Setoran Sampah End-to-End](diagrams/sequence_diagram.svg)
+![Gambar 3.6 – Sequence Diagram Alur Setoran Sampah End-to-End](diagrams/sequence_diagram_setoran_ecopoint.png)
 
 *Gambar 3.6 – Sequence Diagram Alur Setoran Sampah End-to-End*
 
@@ -302,7 +302,7 @@ Langkah eksekusi: (1) Ambil deposit berstatus `menunggu_poin`, (2) cek `price_se
 
 Transisi dibatasi secara ketat (guards) oleh role aktor yang sedang login.
 
-![Gambar 3.8 – State Machine Diagram Deposit dan Redemption](diagrams/state_diagram.svg)
+![Gambar 3.8 – State Machine Diagram Deposit dan Redemption](diagrams/state_diagram_ecopoint.png)
 
 *Gambar 3.8 – State Machine Diagram Deposit dan Redemption*
 

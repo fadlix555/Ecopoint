@@ -104,7 +104,7 @@ Dokumen ini dibagi menjadi lima bagian utama:
 * **Viewpoint:** Context
 * **Representation:** UML Use Case Diagram. Sistem berinteraksi dengan lima aktor eksternal: **User** (mendaftar, setoran, lihat saldo, redeem), **Admin Gudang** (input timbangan, kelola inventori), **Super Admin** (tambah poin, approval redeem, konfigurasi harga), **Payment Gateway** (proses transfer payout), dan **Mitra** (pembeli sampah terkumpul). Mencakup 15 Use Case utama. Relasi include: UC-09 Tambah Poin «include» UC-08 Review Data Timbangan; UC-11 Setujui Redeem «include» UC-15 Proses Transfer E-Wallet.
 
-![Gambar 3.1 – Use Case Diagram Sistem EcoPoint](diagrams/use_case_diagram.svg)
+![Gambar 3.1 – Use Case Diagram Sistem EcoPoint](diagrams/use_case_diagram_ecopoint.png)
 
 *Gambar 3.1 – Use Case Diagram Sistem EcoPoint*
 
